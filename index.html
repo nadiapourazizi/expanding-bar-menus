@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document nadia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <section>
+            <img>
+            <header>
+                <div id="div1"></div>
+                <div id="div2"></div>
+            </header>
+            <div id="div3">
+               
+            </div>
+        </section>
+    </main>
+    <div id="outdiv">
+        <a href="" target="_blank" title="Linkdin"></a>
+    </div>
+
+   <script>
+    document.querySelector('main>section>img').setAttribute('src','img/bg_yellow.jpg')
+    document.getElementById('div1').innerHTML = '<p>mushy hyperdrive<br> green trees <br> fantasmania <br> pin theater</p>'
+    document.getElementById('div2').innerHTML = `
+                    <h1>wild</h1><p>expanding bar menus</p>
+    `
+    document.getElementById('div3').innerHTML = `
+                 <nav>
+                    <section class="sec">
+                        <div title="click"><h3>Fantasmania</h3></div>
+                    </section>
+                    <section class="sec">
+                        <div title="click"><h3>Polarrization</h3></div>
+                    </section>
+                    <section class="sec">
+                        <div title="click"><h3>Wallypurific</h3></div>
+                    </section> 
+                 </nav>
+                 <footer>
+                    <span><a href="https://github.com/nadiapourazizi" target="_blank" title="Github"><i class="bi bi-github"></i></a></span>
+                    <span><a href="https://www.linkedin.com/in/nadia-pourazizi-467343256/" target="_blank" title="Linkdin"><i class="bi bi-linkedin"></i></a></span>
+                 </footer>
+    `
+    let  _outdiv = document.getElementById('outdiv')
+    let _section = document.querySelectorAll('.sec')
+    console.log(_section)
+    _section.forEach(function(val, index){
+        val.addEventListener('click', function(){
+            _outdiv.style.left = '0'
+            _outdiv.style.transition = '2s'
+            console.log('outdiv2')
+        })
+    })
+    _outdiv.innerHTML = `
+    <section>
+       <div>
+            <h3>03/11/2022</h3>
+            <h4>saponification</h4>
+            <h4>velocity</h4>
+            <h4>ionization</h4>
+            <h4>geocentric</h4>
+            <h4>magnitude</h4>
+        </div>
+        <div>
+            <h3>09/17/2022</h3>
+            <h4>energetic</h4>
+            <h4>hematocrit</h4>
+            <h4>amphiphilic</h4>
+            <h4>neutrophil</h4>
+            <h4>gaussian</h4>
+        </div>
+
+        <div class= 'my-2 py-5 px-5 mx-5' id= 'div4'>
+         <h5 class = 'text-white'> back >> </h5>
+       </div>
+    </section>
+    
+    `
+
+    let _div4 = document.getElementById('div4')
+    console.log(_div4);
+    -_div4.addEventListener('click' , function(){
+        _outdiv.style.left = '-110%'
+        _outdiv.style.transition = '2.5s'
+    })
+   </script> 
+</body>
+</html>
